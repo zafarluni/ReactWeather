@@ -1,7 +1,7 @@
 var path = require('path');
 
 module.exports = {
-    entry: './app/app.jsx',
+    entry: ['babel-polyfill','./app/app.jsx'],
     output: {
         path: __dirname,
         filename: './public/bundle.js'
@@ -25,7 +25,7 @@ module.exports = {
                 loader: 'babel-loader',
                 
                 query: {
-                    presets: ['react', 'es2015','stage-0-promises']
+                    presets: ['react', 'es2015'],             
                 },
                 test: /\.jsx?$/,
                 exclude: /(node_modules | bower_components)/
