@@ -23,8 +23,9 @@ module.exports = {
         loaders: [
             {
                 loader: 'babel-loader',
+                
                 query: {
-                    presets: ['react', 'es2015']
+                    presets: ['react', 'es2015','stage-0-promises']
                 },
                 test: /\.jsx?$/,
                 exclude: /(node_modules | bower_components)/
